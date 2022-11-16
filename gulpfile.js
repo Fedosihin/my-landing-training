@@ -84,18 +84,18 @@ gulp.task('sprite', function (cb) {
     cssName: 'sprite.scss'
   }));
 	spriteData.img.pipe(gulp.dest('build/images/'));
-	spriteData.css.pipe(gulp.dest('sourse/styles/global/'));
+	// spriteData.css.pipe(gulp.dest('source/styles/global/')); ПРОБЛЕМА ДУБЛИРУЕТ ПАПКУ sourse
 	cb();
 }); // Изменена как в видосе. Что делает. Не ясно. Особенно про scss???
 
 /* --- Copy Fonts --- */
 gulp.task('copy:fonts', function() {
-	return gulp.src('./sourse/fonts/**/*.*').pipe(gulp.dest('build/fonts'));
+	return gulp.src('./source/fonts/**/*.*').pipe(gulp.dest('build/fonts'));
 });
 
 /* --- Copy Images --- */
 gulp.task('copy:images', function() {
-	return gulp.src('./sourse/images/**/*.*').pipe(gulp.dest('build/images'));
+	return gulp.src('./source/images/**/*.*').pipe(gulp.dest('build/images'));
 });
 
 /* --- Delete --- */

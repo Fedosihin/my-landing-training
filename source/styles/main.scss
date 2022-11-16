@@ -1,3 +1,21 @@
-body{
-	background: grey;
-}
+// normalize
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+// font-awesome
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+//global
+@import 'global/fonts.scss';
+@import 'global/vars.scss';
+@import 'global/common.scss';
+@import 'global/base.scss';
+@import 'global/sprite.scss';
+@import 'global/mixins.scss';
+@import 'global/button.scss';
+//sections
+@import 'sections/header.scss';
+@import 'sections/nav.scss';
+
+
+
+
