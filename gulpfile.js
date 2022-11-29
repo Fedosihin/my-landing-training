@@ -78,13 +78,13 @@ gulp.task('styles:compile', function(){
 
 /* --- Sprites ---*/
 gulp.task('sprite', function (cb) {
-  var spriteData = gulp.src('source/images/*.png').pipe(spritesmith({
+  var spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
 		imgPath: '../images/sprite.png',
     cssName: 'sprite.scss'
   }));
 	spriteData.img.pipe(gulp.dest('build/images/'));
-	// spriteData.css.pipe(gulp.dest('source/styles/global/')); ПРОБЛЕМА ДУБЛИРУЕТ ПАПКУ sourse
+	spriteData.css.pipe(gulp.dest('source/styles/global/')); 
 	cb();
 }); // Изменена как в видосе. Что делает. Не ясно. Особенно про scss???
 
